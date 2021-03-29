@@ -1,7 +1,7 @@
 import Loops.{ForeachLoops, Ranges, StandardLoops}
-import org.scalatest.FunSuite
+import org.scalatest.funsuite.AnyFunSuite
 
-class LoopsTest extends FunSuite  {
+class LoopsTest extends AnyFunSuite {
   test("Loops.StandardLoops") {
     val start = 1
     val stop = 6
@@ -15,19 +15,19 @@ class LoopsTest extends FunSuite  {
     // 3, 6
     assert(StandardLoops.standardForWithToAndIf(start, stop) === 9)
     //////////////////////////////////
-    var vec = Vector(1,2,3,4,5,6)
+    var vec = Vector(1, 2, 3, 4, 5, 6)
     val vecFromFunction0 = StandardLoops.getValuesFromStandardForWithToAndYield(start, stop, 0)
     val vecFromFunction1 = StandardLoops.getValuesFromStandardForWithToAndYield(start, stop, 1)
     assert(vecFromFunction0 === vec)
     assert(vecFromFunction0.size === vec.size)
     assert(vecFromFunction0.size === vecFromFunction1.size)
-    vec = for(v <- vec) yield v - 1
+    vec = for (v <- vec) yield v - 1
     assert(vecFromFunction1 === vec)
     assert(vecFromFunction1.size === vec.size)
   }
 
   test("Loops.ForeachLoops") {
-    val list = List(1,2,3,4,5,6)
+    val list = List(1, 2, 3, 4, 5, 6)
 
     assert(ForeachLoops.getSumOfListWithStandardFor(list) === ForeachLoops.getSumOfListWithForeach(list))
     assert(ForeachLoops.getSumOfListWithStandardFor(list) === 21)
