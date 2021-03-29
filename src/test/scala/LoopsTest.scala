@@ -14,7 +14,7 @@ class LoopsTest extends AnyFunSuite {
     assert(StandardLoops.standardForWithUntilAndBy(start, stop, jump) === 9)
     // 3, 6
     assert(StandardLoops.standardForWithToAndIf(start, stop) === 9)
-    //////////////////////////////////
+
     var vec = Vector(1, 2, 3, 4, 5, 6)
     val vecFromFunction0 = StandardLoops.getValuesFromStandardForWithToAndYield(start, stop, 0)
     val vecFromFunction1 = StandardLoops.getValuesFromStandardForWithToAndYield(start, stop, 1)
@@ -48,15 +48,7 @@ class LoopsTest extends AnyFunSuite {
     assert(range === Ranges.getRangeIntStartToStopByJump(start, stop, jump))
     val lowerCaseCharArray = Array('b', 'c', 'd', 'e')
     assert(lowerCaseCharArray === Ranges.getArrayRangeCharStartToStop('b', 'e'))
-    val lowerCaseCharSeq = Seq('b', 'c', 'd', 'e')
-    assert(lowerCaseCharSeq === Ranges.getRangeSeqStartToStop('b', 'e'))
     val lowerCaseCharList = List('b', 'c', 'd', 'e')
     assert(lowerCaseCharList === Ranges.getRangeListStartToStop('b', 'e'))
-    println(lowerCaseCharArray.mkString("Array(", ", ", ")"))
-    println(lowerCaseCharSeq)
-    println(lowerCaseCharList)
-    assert(lowerCaseCharArray === lowerCaseCharSeq) //???????? xD
-    assert(lowerCaseCharArray === lowerCaseCharList) //???????? xD
-    assert(lowerCaseCharSeq === lowerCaseCharList) //???????? xD
   }
 }
