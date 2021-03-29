@@ -1,4 +1,4 @@
-package ArraysAndCollections
+package collections
 
 object Arrays {
   def getSumOfArrayWithForeach(list: Array[Int]): Int = {

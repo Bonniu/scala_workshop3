@@ -1,4 +1,4 @@
-package ArraysAndCollections
+package collections
 
 object Sequences {
   def getSumOfSeqWithForeach(seq: Seq[Int]): Int = {

@@ -1,4 +1,6 @@
-import ArraysAndCollections.{Arrays, Sequences}
+package collections
+
+import collections.{Arrays, Sequences}
 import org.scalatest.funsuite.AnyFunSuite
 
 class ArraysAndCollectionsTest extends AnyFunSuite {
