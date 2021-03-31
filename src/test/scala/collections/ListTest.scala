@@ -30,9 +30,25 @@ class ListTest extends AnyFunSuite {
     val list2 = 11 :: list
     assert(list2.length == 5)
     assert(list2 == List(11, 2, 1, 3, 7))
+
     val sortedList = list2.sorted
-    assert(sortedList == List(1, 2, 3, 4, 5, 6, 7, 11))
-    val listDistinct = list.distinct
+    assert(sortedList == List(1, 2, 3, 7, 11))
+
+    val list3 = 1 :: 1 :: 2 :: 3 :: 5 :: 8 :: 8 :: 8 :: Nil
+    val listDistinct = list3.distinct
+    assert(listDistinct.length === 5)
+  }
+
+  test("getting elements from List") {
+    val list = List(23, 11, 30, 27)
+    assert(list(3) === 27)
+
+    assertThrows[IndexOutOfBoundsException] {
+      val gettingOutOfList = list(5) // list() rzuca wyjątek
+    }
+
+    val liftValue = list.lift(5) // jeżeli nie ma zwróci None
+    assert(liftValue === None)
   }
 
 }

@@ -19,5 +19,8 @@ class TupleTest extends AnyFunSuite {
     for ((a, b, result) <- numPairs) {
       assert(a * b === result +- 0.0001)
     }
+    for (tuple <- numPairs) {
+      assert(tuple._1 * tuple._2 === tuple._3 +- 0.0001)
+    }
   }
 }
