@@ -14,6 +14,13 @@ class ListTest extends AnyFunSuite {
     assert(withNil.equals(listRange))
   }
 
+  test("Nil") {
+    assert(Nil == List())
+    assert(Nil.eq(List()))
+    assert(Nil.equals(List()))
+    assert(System.identityHashCode(Nil) == System.identityHashCode(List()))
+  }
+
   test("put anything in list") {
     val value = List(1, 0.312, "123123", 'd', null, 0x023, true)
     assert(value.length == 7)
