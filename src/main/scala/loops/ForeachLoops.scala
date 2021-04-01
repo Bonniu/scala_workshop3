@@ -1,4 +1,4 @@
-package Loops
+package loops
 
 object ForeachLoops {
   def getSumOfListWithStandardFor(list: List[Int]): Int = {

@@ -1,4 +1,4 @@
-package Loops
+package loops
 
 object StandardLoops {
   def standardForWithTo(start: Int, stop: Int): Int = {

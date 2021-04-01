@@ -1,4 +1,4 @@
-package Loops
+package loops
 
 import scala.collection.immutable.NumericRange
 
@@ -17,10 +17,6 @@ object Ranges {
 
   def getArrayRangeCharStartToStop(start: Char, stop: Char): Array[Char] = {
     (start to stop).toArray
-  }
-
-  def getRangeSeqStartToStop(start: Char, stop: Char): Seq[Char] = {
-    (start to stop).toSeq
   }
 
   def getRangeListStartToStop(start: Char, stop: Char): List[Char] =  {

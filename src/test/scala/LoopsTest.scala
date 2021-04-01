@@ -1,4 +1,4 @@
-import Loops.{ForeachLoops, Ranges, StandardLoops}
+import loops.{ForeachLoops, Ranges, StandardLoops}
 import org.scalatest.funsuite.AnyFunSuite
 
 class LoopsTest extends AnyFunSuite {
